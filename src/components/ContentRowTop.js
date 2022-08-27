@@ -1,12 +1,45 @@
 import React from 'react';
-import imagenFondo from '../assets/images/image-1660573443536.jpg';
-import imagenDestacado from '../assets/images/img-spirit-whisky-jhonnie-walker-black-label.jpg';
-import ContentRowProducts from './ContentRowProducts';
+import SmallCard from './SmallCard';
+// import imagenFondo from '../assets/images/image-1660573443536.jpg';
+// import imagenDestacado from '../assets/images/img-spirit-whisky-jhonnie-walker-black-label.jpg';
+// import ContentRowProducts from './ContentRowProducts';
+
+let productInDataBase = {
+    color:   "primary",
+    titulo: "Productos en Base Datos",
+    valor: 24,
+    icono: "fas fa-wine-bottle",
+}
+
+let amount ={
+    color:   "success",
+    titulo: "Total ventas",
+    valor: 79,
+    icono: "fas fa-dollar-sign",
+}
+
+let user = {
+    color:   "warning",
+    titulo: "Cantidad de usaurios",
+    valor: 49,
+    icono: "fas fa-user",
+}
+
+let cardProps = [productInDataBase,amount,user];
+
 function ContentRowTop(){
     return(
         <React.Fragment>
+			<div className="row">
+            {
+                cardProps.map((producto,index)=>{
+                    return <SmallCard  {...producto}  key= {index}/>
+                })
+            }      
+        </div>
+
 				
-				<div className="container-fluid">
+				{/* <div className="container-fluid">
 					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
 						<h1 className="h3 mb-0 text-gray-800">OpenBar Dashboard</h1>
 					</div>					
@@ -42,7 +75,7 @@ function ContentRowTop(){
 							</div>
 						</div>	
 					</div>			
-				</div>
+				</div> */}
 				
         </React.Fragment>
     )
