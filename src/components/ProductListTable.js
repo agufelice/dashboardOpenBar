@@ -2,7 +2,7 @@ import React from "react";
 
 import ProductRow from "./ProductRow";
 
-function ProductListTable({products}) {
+function ProductListTable({ products }) {
     return (
         <div className="table-responsive">
             <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -23,7 +23,7 @@ function ProductListTable({products}) {
                 </tfoot>
                 <tbody>
                     {
-                       products?.map((product, index) =>
+                        products?.map((product, index) =>
                             <ProductRow product={product} key={index} />
                         )
                     }

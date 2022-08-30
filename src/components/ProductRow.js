@@ -21,7 +21,7 @@ function ProductRow(props) {
             </td>
             <td>
                 {props.product.discount}
-            </td>              
+            </td>
         </tr>
     )
 }

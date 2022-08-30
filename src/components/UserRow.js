@@ -15,7 +15,7 @@ function UserRow(props) {
             </td>
             <td>
                 {props.user.email}
-            </td>                         
+            </td>
         </tr>
     )
 }

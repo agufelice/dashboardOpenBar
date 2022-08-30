@@ -19,7 +19,7 @@ class VarietiesInDb extends React.Component {
     }
 
     handleMouseOver = () => {
-        this.setState({overOnH6: !this.state.overOnH6});
+        this.setState({ overOnH6: !this.state.overOnH6 });
     }
 
 
@@ -27,7 +27,7 @@ class VarietiesInDb extends React.Component {
         return (
             <React.Fragment>
                 {/*<!-- Categories in DB -->*/}
-                <div className="col-lg-6 mb-4">						
+                <div className="col-lg-6 mb-4">
                     <div className="card shadow mb-4">
                         <div className="card-header py-3">
                             <h6 onClick={this.handleMouseOver} className="m-0 font-weight-bold text-gray-800">Variedades en Base de Datos</h6>
@@ -35,16 +35,16 @@ class VarietiesInDb extends React.Component {
                         <div className={`card-body ${this.state.overOnH6 && 'bg-secondary'}`}>
                             <div className="row">
                                 {
-                                    this.state.varietiesList.map((variety,index)=>{
-                                        return  <Variety variety={variety.name}  key={index} />
+                                    this.state.varietiesList.map((variety, index) => {
+                                        return <Variety variety={variety.name} key={index} />
                                     })
                                 }
                             </div>
                         </div>
                     </div>
                 </div>
-           
-        </React.Fragment>
+
+            </React.Fragment>
         )
     }
 

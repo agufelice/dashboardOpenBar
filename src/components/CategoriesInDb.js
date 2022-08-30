@@ -1,5 +1,5 @@
 import React from 'react';
-import Category  from './Category';
+import Category from './Category';
 
 class CategoriesInDb extends React.Component {
     state = {
@@ -19,7 +19,7 @@ class CategoriesInDb extends React.Component {
     }
 
     handleMouseOver = () => {
-        this.setState({overOnH6: !this.state.overOnH6});
+        this.setState({ overOnH6: !this.state.overOnH6 });
     }
 
 
@@ -27,7 +27,7 @@ class CategoriesInDb extends React.Component {
         return (
             <React.Fragment>
                 {/*<!-- Categories in DB -->*/}
-                <div className="col-lg-6 mb-4">						
+                <div className="col-lg-6 mb-4">
                     <div className="card shadow mb-4">
                         <div className="card-header py-3">
                             <h6 onClick={this.handleMouseOver} className="m-0 font-weight-bold text-gray-800">Categorias en Base de Datos</h6>
@@ -35,16 +35,16 @@ class CategoriesInDb extends React.Component {
                         <div className={`card-body ${this.state.overOnH6 && 'bg-secondary'}`}>
                             <div className="row">
                                 {
-                                    this.state.categoriesList.map((category,index)=>{
-                                        return  <Category category={category.name}  key={index} />
+                                    this.state.categoriesList.map((category, index) => {
+                                        return <Category category={category.name} key={index} />
                                     })
                                 }
                             </div>
                         </div>
                     </div>
                 </div>
-           
-        </React.Fragment>
+
+            </React.Fragment>
         )
     }
 
