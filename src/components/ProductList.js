@@ -1,10 +1,11 @@
 import React from "react";
+import ProductListTable from "./ProductListTable";
 import ProductRow from "./ProductRow";
 class ProductList extends React.Component {
 
     state = {
-        ProductList: [],
-        // overOnH6: false
+        productList: [],
+       totalProducts: 0
     }
 	componentDidMount() {
         fetch('http://localhost:3001/api/products')
@@ -12,7 +13,8 @@ class ProductList extends React.Component {
             .then(products => {
 				
                 this.setState({
-                    ProductList: products.data
+                    productList: products.data,
+                    totalProducts: products.meta.total
                 });
             })
             .catch(err => console.log(err));
@@ -23,33 +25,7 @@ class ProductList extends React.Component {
             <div className="card shadow mb-4">
                 <h1 className="h3 mb-2 text-gray-800">Productos en Base de Datos</h1>
 						<div className="card-body">
-							<div className="table-responsive">
-								<table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-									<thead>
-										<tr>
-                                            <th>Id</th>
-                                            <th>Name</th>
-                                            <th>Brand</th>
-                                            <th>Precio</th>
-                                            <th>Stock</th>
-                                            <th>Descuento</th>                                              
-										</tr>
-									</thead>
-									<tfoot>
-										<tr>
-                                        
-										</tr>
-									</tfoot>
-									<tbody>
-									{
-                                    this.state.ProductList.map((product,index)=>
-                                    <ProductRow product={product} key={index} />
-									
-									)
-                                }
-									</tbody>
-								</table>
-							</div>
+							<ProductListTable products={this.state.productList} />
 						</div>
 					</div>
         )

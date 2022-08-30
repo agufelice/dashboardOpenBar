@@ -1,6 +1,7 @@
 import React from 'react';
 import TopBar from './TopBar';
 import ProductDetailFetch from './ProductDetailFetch';
+import Product from './Product';
 // import ContentRowTop from './ContentRowTop';
 import Footer from './Footer';
 function ContentWrapper(){
@@ -11,7 +12,7 @@ function ContentWrapper(){
                 {/*<!-- Main Content -->*/}
                 <div id="content">
                     <TopBar />
-                    <ProductDetailFetch />
+                    <Product />
                     {/* <UserComp /> */}
                     {/* <ProductRankingFetch /> */}
                     {/* <Product /> */}
