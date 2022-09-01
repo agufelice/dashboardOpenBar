@@ -13,7 +13,7 @@ function ContentRowTop({ totalProducts, totalUsers }) {
 	let amount = {
 		color: "success",
 		titulo: "Total ventas",
-		valor: 79,
+		valor: 0,
 		icono: "fas fa-dollar-sign",
 	}
 
