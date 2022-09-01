@@ -32,6 +32,7 @@ class UserList extends React.Component {
                                     <th>Nombre</th>
                                     <th>Apellido</th>
                                     <th>Email</th>
+                                    <th>Rol</th>
                                 </tr>
                             </thead>
                             <tfoot>
