@@ -2,6 +2,7 @@ import React from 'react';
 
 
 function UserRow(props) {
+    console.log(props.user)
     return (
         <tr>
             <td>
@@ -17,7 +18,7 @@ function UserRow(props) {
                 {props.user.email}
             </td>
             <td>
-                {props.user.rol_id.name}
+                {props.user.role.name}
             </td>
         </tr>
     )
